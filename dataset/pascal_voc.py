@@ -32,6 +32,8 @@ class PascalVoc(Imdb):
         self.devkit_path = devkit_path
         self.data_path = os.path.join(devkit_path, 'VOC' + year)
         self.extension = '.jpg'
+        # self.extension = '.JPG'
+
         self.is_train = is_train
 
         self.classes = self._load_class_names(names,

@@ -76,7 +76,7 @@ def parse_args():
     parser.add_argument('--dataset', dest='dataset', help='dataset to use',
                         default='pascal', type=str)
     parser.add_argument('--year', dest='year', help='which year to use',
-                        default='2007,2012', type=str)
+                        default='2007', type=str)
     parser.add_argument('--set', dest='set', help='train, val, trainval, test',
                         default='trainval', type=str)
     parser.add_argument('--target', dest='target', help='output list file',
