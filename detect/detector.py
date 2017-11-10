@@ -144,6 +144,8 @@ class Detector(object):
                                     '{:s} {:.3f}'.format(class_name, score),
                                     bbox=dict(facecolor=colors[cls_id], alpha=0.5),
                                     fontsize=12, color='white')
+
+        plt.savefig('./result/'+img)
         plt.show()
 
     def detect_and_visualize(self, im_list, root_dir=None, extension=None,
