@@ -95,6 +95,7 @@ if __name__ == '__main__':
     if args.dataset == 'pascal':
         db = load_pascal(args.set, args.year, args.root_path, args.shuffle)
         print("saving list to disk...")
+        print(args.target, args.root_path)
         db.save_imglist(args.target, root=args.root_path)
     elif args.dataset == 'coco':
         db = load_coco(args.set, args.root_path, args.shuffle)
