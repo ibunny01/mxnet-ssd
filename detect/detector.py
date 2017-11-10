@@ -1,6 +1,6 @@
+from __future__ import print_function
 import matplotlib
 matplotlib.use('Agg')
-from __future__ import print_function
 import mxnet as mx
 import numpy as np
 from timeit import default_timer as timer
