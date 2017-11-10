@@ -42,7 +42,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Single-shot detection network demo')
     parser.add_argument('--network', dest='network', type=str, default='resnet50',
                         help='which network to use')
-    parser.add_argument('--images', dest='images', type=str, default='./data/demo/dog.jpg',
+    parser.add_argument('--images', dest='images', type=str, default='./data/demo/',
                         help='run demo with images, use comma to seperate multiple images')
     parser.add_argument('--dir', dest='dir', nargs='?',
                         help='demo image directory, optional', type=str)
