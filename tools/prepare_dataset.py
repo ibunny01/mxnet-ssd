@@ -27,9 +27,13 @@ def load_pascal(image_set, year, devkit_path, shuffle=False):
     ----------
     Imdb
     """
+    print(image_set, year, devkit_path)
     image_set = [y.strip() for y in image_set.split(',')]
+    print('image_set: ', image_set)
     assert image_set, "No image_set specified"
     year = [y.strip() for y in year.split(',')]
+    print('year: ', year)
+
     assert year, "No year specified"
 
     # make sure (# sets == # years)
