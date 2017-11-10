@@ -31,6 +31,7 @@ class PascalVoc(Imdb):
         self.year = year
         self.devkit_path = devkit_path
         self.data_path = os.path.join(devkit_path, 'VOC' + year)
+        print('self.data_path', self.data_path)
         # self.extension = '.jpg'
         self.extension = '.JPG'
 
@@ -38,6 +39,7 @@ class PascalVoc(Imdb):
 
         self.classes = self._load_class_names(names,
             os.path.join(os.path.dirname(__file__), 'names'))
+        print('self.classes: ', self.classes)
 
         self.config = {'use_difficult': True,
                        'comp_id': 'comp4',}
@@ -47,6 +49,7 @@ class PascalVoc(Imdb):
         self.num_images = len(self.image_set_index)
         if self.is_train:
             self.labels = self._load_image_labels()
+            print('self.labels: ', self.labels)
 
     @property
     def cache_path(self):

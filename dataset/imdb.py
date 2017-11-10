@@ -104,7 +104,9 @@ class Imdb(object):
             file directory
         """
         full_path = osp.join(dirname, filename)
+        print('full_path: ', full_path)
         classes = []
         with open(full_path, 'r') as f:
             classes = [l.strip() for l in f.readlines()]
+            print('classe: ', classes)
         return classes
