@@ -117,7 +117,7 @@ class Detector(object):
         """
         import matplotlib.pyplot as plt
         import random
-        plt.imshow(img)
+        #plt.imshow(img)
         height = img.shape[0]
         width = img.shape[1]
         colors = dict()
