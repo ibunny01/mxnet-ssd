@@ -37,9 +37,10 @@ class PascalVoc(Imdb):
 
         self.is_train = is_train
 
-        self.classes = self._load_class_names(names,
-            os.path.join(os.path.dirname(__file__), 'names'))
-        print('self.classes: ', self.classes)
+        # self.classes = self._load_class_names(names,
+        #     os.path.join(os.path.dirname(__file__), 'names'))
+
+        self.classes = ['red', 'black', 'white', 'fangzhenchui', 'ban']
 
         self.config = {'use_difficult': True,
                        'comp_id': 'comp4',}
