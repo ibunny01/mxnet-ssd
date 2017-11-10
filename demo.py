@@ -107,6 +107,10 @@ if __name__ == '__main__':
 
     # parse image list
     image_list = [i.strip() for i in args.images.split(',')]
+
+    picList = os.listdir(args.images)
+    image_list = [os.path.join(args.images, pic) for pic in picList]
+    print image_list
     assert len(image_list) > 0, "No valid image specified to detect"
 
     network = None if args.deploy_net else args.network
