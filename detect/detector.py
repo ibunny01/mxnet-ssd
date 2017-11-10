@@ -146,7 +146,7 @@ class Detector(object):
                                     fontsize=12, color='white')
 
         plt.savefig('./result/'+img)
-        plt.show()
+        #plt.show()
 
     def detect_and_visualize(self, im_list, root_dir=None, extension=None,
                              classes=[], thresh=0.6, show_timer=False):
