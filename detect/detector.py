@@ -175,7 +175,7 @@ class Detector(object):
             im_list = [im_list]
         assert len(dets) == len(im_list)
         for k, det in enumerate(dets):
-            picName = im_list[k]
+            pic = im_list[k]
             img = cv2.imread(im_list[k])
             img[:, :, (0, 1, 2)] = img[:, :, (2, 1, 0)]
-            self.visualize_detection(img, det, classes, thresh, picName)
+            self.visualize_detection(img, det, classes, thresh, pic)
