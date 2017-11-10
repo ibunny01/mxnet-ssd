@@ -35,7 +35,7 @@ def load_pascal(image_set, year, devkit_path, shuffle=False):
     print('year: ', year)
 
     assert year, "No year specified"
-
+    print('len(image_set) == len(year): ', len(image_set) == len(year))
     # make sure (# sets == # years)
     if len(image_set) > 1 and len(year) == 1:
         year = year * len(image_set)
@@ -45,6 +45,7 @@ def load_pascal(image_set, year, devkit_path, shuffle=False):
 
     imdbs = []
     for s, y in zip(image_set, year):
+        print ('s, y: ', s, y)
         imdbs.append(PascalVoc(s, y, devkit_path, shuffle, is_train=True))
     if len(imdbs) > 1:
         return ConcatDB(imdbs, shuffle)
