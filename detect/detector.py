@@ -101,7 +101,7 @@ class Detector(object):
                             is_train=False)
         return self.detect(test_iter, show_timer)
 
-    def visualize_detection(self, img, dets, classes=[], thresh=0.6, picName):
+    def visualize_detection(self, picName, img, dets, classes=[], thresh=0.6):
         """
         visualize detections in one image
 
@@ -175,7 +175,7 @@ class Detector(object):
             im_list = [im_list]
         assert len(dets) == len(im_list)
         for k, det in enumerate(dets):
-            pic = im_list[k]
+            picName = im_list[k]
             img = cv2.imread(im_list[k])
             img[:, :, (0, 1, 2)] = img[:, :, (2, 1, 0)]
-            self.visualize_detection(img, det, classes, thresh, pic)
+            self.visualize_detection(picName, img, det, classes, thresh, )
