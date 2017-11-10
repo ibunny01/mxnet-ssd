@@ -111,6 +111,10 @@ if __name__ == '__main__':
     ctx = [mx.cpu()] if not ctx else ctx
     # class names if applicable
     class_names = parse_class_names(args)
+    print '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    print '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    print ('class_names: ', class_names)
     # start training
     train_net(args.network, args.train_path,
               args.num_class, args.batch_size,

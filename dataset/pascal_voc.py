@@ -50,7 +50,6 @@ class PascalVoc(Imdb):
         self.num_images = len(self.image_set_index)
         if self.is_train:
             self.labels = self._load_image_labels()
-            print('self.labels: ', self.labels)
 
     @property
     def cache_path(self):
