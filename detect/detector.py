@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 from __future__ import print_function
 import mxnet as mx
 import numpy as np
@@ -145,7 +147,7 @@ class Detector(object):
                                     bbox=dict(facecolor=colors[cls_id], alpha=0.5),
                                     fontsize=12, color='white')
 
-        plt.savefig('./result/'+img)
+        plt.savefig('result.png')
         #plt.show()
 
     def detect_and_visualize(self, im_list, root_dir=None, extension=None,
